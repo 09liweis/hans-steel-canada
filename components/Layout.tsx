@@ -70,7 +70,7 @@ export function Footer() {
     { label: 'Equipment', href: '/equipment' },
     { label: 'About Us', href: '/about' },
     { label: 'Privacy Policy', href: '/privacy-policy' },
-    { label: 'Cookie Policy', href: '/cookies' },
+    { label: 'Cookie Policy', href: '/cookie-policy' },
     { label: 'Privacy Settings', href: '/settings' },
   ];
   return (
