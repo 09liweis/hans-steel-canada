@@ -11,53 +11,54 @@ const Projects: NextPage = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
-          <p className="text-xl md:text-2xl">
-            Hans Steel Canada has the bonding and financial capacity for any size project!
+      <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTEyIDBjMy4zMTQgMCA2IDIuNjg2IDYgNnMtMi42ODYgNi02IDYtNi0yLjY4Ni02LTYgMi42ODYtNiA2LTZ6IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Our Projects</h1>
+          <p className="text-xl md:text-2xl text-slate-200 max-w-3xl">
+            Hans Steel Canada has the bonding and financial capacity for any size project
           </p>
         </div>
       </section>
 
       {/* Orillia City Hall - Featured Project */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
             {/* Video/Image Section */}
-            <div className="space-y-6">
-              <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video">
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                  <div className="text-center text-white">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-[#c41e3a] rounded-full flex items-center justify-center hover:bg-[#a01830] transition-colors cursor-pointer">
-                      <svg className="w-10 h-10 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <p className="text-sm">Watch on YouTube</p>
-                  </div>
-                </div>
+            <div className="space-y-8">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl aspect-video group">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VpTIzdQbfa8"
+                  title="Orillia Recreation Facility - October 2017 Update"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
 
               {/* Logo and Link */}
-              <div className="flex items-center gap-4 bg-gray-100 p-6 rounded-lg">
-                <div className="w-16 h-16 bg-white rounded flex items-center justify-center flex-shrink-0">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">O</span>
+              <div className="flex items-center gap-6 bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
+                <div className="w-20 h-20 bg-white rounded-2xl shadow-md flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-inner">
+                    <span className="text-white font-bold text-3xl">O</span>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">To learn more about this exciting project</p>
-                  <p className="font-semibold text-gray-900">Visit Orillia recreation facility</p>
+                  <p className="text-sm text-slate-600 mb-1">To learn more about this exciting project</p>
+                  <p className="font-bold text-slate-900 text-lg">Visit Orillia Recreation Facility</p>
+                  <p className="text-xs text-slate-500 mt-1">October 2017 Update</p>
                 </div>
               </div>
             </div>
 
             {/* Description Section */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Orillia City Hall</h2>
-              <p className="text-xl text-gray-600 mb-6">- Recreation Facility</p>
-              <p className="text-gray-700 leading-relaxed text-lg">
+            <div className="flex flex-col justify-center">
+              <h2 className="text-4xl md:text-5xl font-bold mb-3 text-slate-900 tracking-tight">Orillia City Hall</h2>
+              <p className="text-2xl text-slate-600 mb-8 font-light">Recreation Facility</p>
+              <div className="h-1 w-24 bg-gradient-to-r from-[#c41e3a] to-red-700 mb-8 rounded-full"></div>
+              <p className="text-slate-700 leading-relaxed text-lg">
                 The structural steel work for the facility is divided into four phases with Phase 1 in the pool change room area now complete. Phase 2, which is the multi-purpose rooms, gymnasium change rooms and fitness centre is on site and erection is currently underway. Portions of Phase 3 (pool) is currently in progress as well. Phase 4 (gymnasium) is anticipated to be erect in the spring.
               </p>
             </div>
@@ -65,13 +66,16 @@ const Projects: NextPage = () => {
 
           {/* Image Gallery with Red Indicator */}
           <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#c41e3a]"></div>
-            <div className="pl-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#c41e3a] to-red-700 rounded-full"></div>
+            <div className="pl-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {Array.from({ length: 6 }, (_, i) => (
-                <div key={i} className="relative aspect-[4/3] bg-gray-200 rounded overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-                    <span className="text-xs">Image {i + 1}</span>
-                  </div>
+                <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                  <img 
+                    src={`https://placehold.co/400x300/e2e8f0/64748b?text=Orillia+${i + 1}`}
+                    alt={`Orillia project ${i + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               ))}
             </div>
@@ -80,15 +84,18 @@ const Projects: NextPage = () => {
       </section>
 
       {/* Hydro Post Project */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">Hydro Post</h2>
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="container mx-auto px-4 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-slate-900 tracking-tight">Hydro Post</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {Array.from({ length: 6 }, (_, i) => (
-              <div key={i} className="relative aspect-[4/3] bg-gray-200 rounded overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-                  <span className="text-xs">Hydro {i + 1}</span>
-                </div>
+              <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img 
+                  src={`https://placehold.co/400x300/cbd5e1/475569?text=Hydro+${i + 1}`}
+                  alt={`Hydro Post project ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
@@ -96,22 +103,27 @@ const Projects: NextPage = () => {
       </section>
 
       {/* Crosstown LRT */}
-      <section className="py-16 bg-[#2d3748] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTEyIDBjMy4zMTQgMCA2IDIuNjg2IDYgNnMtMi42ODYgNi02IDYtNi0yLjY4Ni02LTYgMi42ODYtNiA2LTZ6IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wMykiLz48L2c+PC9zdmc+')] opacity-20"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
               Crosstown LRT: Mount Dennis Station and EMSF
             </h2>
-            <p className="text-gray-300 leading-relaxed text-lg">
+            <div className="h-1 w-32 bg-gradient-to-r from-[#c41e3a] to-red-700 mx-auto mb-8 rounded-full"></div>
+            <p className="text-slate-300 leading-relaxed text-lg">
               Mount Dennis is the furthest west stop on the Crosstown line. In addition to the stop, Mount Dennis will be the home of the EMSF, a facility to store and maintain the Crosstown vehicles. The stop will include a passenger pick up and drop off area, and a connection to GO Transit's Kitchener line. TTC bus routes will be adjusted to connect riders to the Crosstown. There will be secure indoor bike parking at this station.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {Array.from({ length: 4 }, (_, i) => (
-              <div key={i} className="relative aspect-video bg-gray-700 rounded overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="absolute inset-0 bg-gray-600 flex items-center justify-center text-gray-400">
-                  <span className="text-xs">LRT {i + 1}</span>
-                </div>
+              <div key={i} className="group relative aspect-video bg-slate-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img 
+                  src={`https://placehold.co/600x400/334155/cbd5e1?text=LRT+${i + 1}`}
+                  alt={`Crosstown LRT ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
@@ -119,35 +131,50 @@ const Projects: NextPage = () => {
       </section>
 
       {/* Feihe International */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Feihe International</h2>
-            <p className="text-xl text-gray-600 mb-6">Kingston Ontario Project</p>
-            <div className="mb-6 py-8">
-              <div className="inline-block bg-gray-100 px-12 py-8 rounded-lg">
-                <div className="text-4xl font-bold text-[#c41e3a]">FIRMUS</div>
-                <div className="text-sm text-gray-600 mt-2">长寿之乡</div>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 text-center lg:text-left">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 tracking-tight">Feihe International</h2>
+                <p className="text-2xl text-slate-600 mb-8 font-light">Kingston Ontario Project</p>
+                <div className="inline-block bg-gradient-to-br from-slate-100 to-slate-50 px-16 py-12 rounded-2xl shadow-lg border border-slate-200 mb-8">
+                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c41e3a] to-red-700 mb-3">FIRMUS</div>
+                  <div className="text-base text-slate-600 tracking-wide">长寿之乡</div>
+                </div>
+                <p className="text-2xl font-semibold text-slate-700">coming soon to Canada</p>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://placehold.co/800x600/e2e8f0/64748b?text=Feihe+Project"
+                    alt="Feihe International Project"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <p className="text-2xl font-semibold text-gray-700">- coming soon for Canada</p>
           </div>
         </div>
       </section>
 
       {/* Brampton Corner */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Brampton Corner</h2>
-            <p className="text-lg text-gray-600 mt-2">- currently under construction</p>
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">Brampton Corner</h2>
+            <p className="text-xl text-slate-600 mt-3 font-light">currently under construction</p>
+            <div className="h-1 w-24 bg-gradient-to-r from-[#c41e3a] to-red-700 mt-6 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {Array.from({ length: 3 }, (_, i) => (
-              <div key={i} className="relative aspect-video bg-gray-200 rounded overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="absolute inset-0 bg-gray-300 flex items-center justify-center text-gray-500">
-                  <span className="text-xs">Brampton {i + 1}</span>
-                </div>
+              <div key={i} className="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img 
+                  src={`https://placehold.co/800x600/cbd5e1/475569?text=Brampton+${i + 1}`}
+                  alt={`Brampton Corner ${i + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
@@ -155,23 +182,35 @@ const Projects: NextPage = () => {
       </section>
 
       {/* Additional Projects Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Kingston C.H */}
-            <div className="relative bg-gray-700 text-white p-12 rounded-lg overflow-hidden hover:bg-gray-600 transition-colors">
-              <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold">Kingston C.H</h3>
+            <div className="group relative bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 text-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-80">
+              <img 
+                src="https://placehold.co/1200x800/1e293b/cbd5e1?text=Kingston+CH"
+                alt="Kingston C.H"
+                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500"
+              />
+              <div className="relative z-10 h-full flex flex-col justify-end p-10">
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight">Kingston C.H</h3>
+                <div className="h-1 w-16 bg-gradient-to-r from-[#c41e3a] to-red-700 mt-4 rounded-full"></div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-800 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
             </div>
 
             {/* Dodge Hausville */}
-            <div className="relative bg-gray-600 text-white p-12 rounded-lg overflow-hidden hover:bg-gray-500 transition-colors">
-              <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold">Dodge Hausville</h3>
+            <div className="group relative bg-gradient-to-br from-slate-600 via-slate-700 to-slate-800 text-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-80">
+              <img 
+                src="https://placehold.co/1200x800/334155/cbd5e1?text=Dodge+Hausville"
+                alt="Dodge Hausville"
+                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500"
+              />
+              <div className="relative z-10 h-full flex flex-col justify-end p-10">
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight">Dodge Hausville</h3>
+                <div className="h-1 w-16 bg-gradient-to-r from-[#c41e3a] to-red-700 mt-4 rounded-full"></div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-700 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
             </div>
           </div>
         </div>
