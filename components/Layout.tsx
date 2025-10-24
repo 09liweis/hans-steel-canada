@@ -2,6 +2,13 @@ import React, { ReactNode } from 'react'
 import Link from 'next/link'
 
 export function Header() {
+  const headerMenu = [
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Services', href: '/services' },
+    { label: 'Equipment', href: '/equipment' },
+    { label: 'About Us', href: '/about' },
+  ];
   return (
     <header className="bg-white">
       <div className="bg-gray-100 border-b border-gray-200">
@@ -43,12 +50,11 @@ export function Header() {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/">Home</Link>
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/projects">Projects</Link>
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/services">Services</Link>
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/equipment">Equipment</Link>
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/careers">Careers</Link>
-              <Link className="text-gray-700 hover:text-[#c41e3a] transition-colors" href="/about">About Us</Link>
+              {headerMenu.map((item) => (
+                <Link key={item.href} className="text-gray-700 hover:text-[#c41e3a] transition-colors" href={item.href}>
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -58,6 +64,15 @@ export function Header() {
 }
 
 export function Footer() {
+  const footerMenu = [
+    { label: 'Services', href: '/services' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Equipment', href: '/equipment' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Cookie Policy', href: '/cookies' },
+    { label: 'Privacy Settings', href: '/settings' },
+  ];
   return (
     <footer className="bg-[#1a1a1a] text-white">
       <div className="container mx-auto px-4 lg:px-8 py-12">
@@ -80,15 +95,16 @@ export function Footer() {
 
           <div>
             <h3 className="font-bold text-base mb-4">Site Map</h3>
+
+
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="hover:text-[#c41e3a] transition-colors">Services</Link></li>
-              <li><Link href="/projects" className="hover:text-[#c41e3a] transition-colors">Projects</Link></li>
-              <li><Link href="/equipment" className="hover:text-[#c41e3a] transition-colors">Equipment</Link></li>
-              <li><Link href="/careers" className="hover:text-[#c41e3a] transition-colors">Careers</Link></li>
-              <li><Link href="/about" className="hover:text-[#c41e3a] transition-colors">About Us</Link></li>
-              <li><Link href="/privacy" className="hover:text-[#c41e3a] transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/cookies" className="hover:text-[#c41e3a] transition-colors">Cookie Policy</Link></li>
-              <li><Link href="/settings" className="hover:text-[#c41e3a] transition-colors">Privacy Settings</Link></li>
+              {footerMenu.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="hover:text-[#c41e3a] transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
