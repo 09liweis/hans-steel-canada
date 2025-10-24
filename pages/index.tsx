@@ -213,60 +213,86 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Professional Equipment</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      {/* Professional Equipment Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-900 tracking-tight">Professional Equipment</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
-              { name: 'Python 5 Bevel II', icon: '🔧' },
-              { name: 'CNC 3 Dimensional High Speed Drilling Line', icon: '⚙️' },
-              { name: 'CNC Plasma Tubular Profiling Machine', icon: '🔥' },
-              { name: 'Gantry Plate-Drilling Machine', icon: '🛠️' },
-              { name: 'Rotating Saw', icon: '⚡' },
-              { name: 'Submerged Arc Welding Saw', icon: '⚒️' },
-              { name: 'SandBlasting Machine', icon: '💨' },
-              { name: 'Shear', icon: '✂️' },
-              { name: 'Press Brake', icon: '📐' },
-              { name: 'Plasma Cutting Machine', icon: '🔥' },
-              { name: 'Steel Tower Pre-fit Jig Station', icon: '🏗️' },
-              { name: 'Sub-Merged Arc Jigs for Tubular Structures', icon: '🔩' }
+              { name: 'Python 5 Bevel II', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Python+5' },
+              { name: 'CNC 3 Dimensional High Speed Drilling Line', image: 'https://placehold.co/200x200/cbd5e1/475569?text=CNC+3D' },
+              { name: 'CNC Plasma Tubular Profiling Machine', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=CNC+Plasma' },
+              { name: 'Gantry Plate-Drilling Machine', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Gantry' },
+              { name: 'Rotating Saw', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Rotating+Saw' },
+              { name: 'Submerged Arc Welding', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Welding' },
+              { name: 'SandBlasting Machine', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=SandBlast' },
+              { name: 'Shear', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Shear' },
+              { name: 'Press Brake', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Press+Brake' },
+              { name: 'Plasma Cutting Machine', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Plasma+Cut' },
+              { name: 'Steel Tower Pre-fit Jig Station', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Jig+Station' },
+              { name: 'Sub-Merged Arc Line For Tubular Structures', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Arc+Line' }
             ].map((equipment, index) => (
-              <div key={index} className="text-center">
-                <div className="w-24 h-24 mx-auto mb-3 bg-gray-200 rounded-full flex items-center justify-center text-3xl">
-                  {equipment.icon}
+              <div key={index} className="group text-center">
+                <div className="relative mb-4 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <img 
+                    src={equipment.image} 
+                    alt={equipment.name}
+                    className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <p className="text-sm font-medium">{equipment.name}</p>
+                <p className="text-sm font-semibold text-slate-700 leading-tight">{equipment.name}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#0b7ed4] text-white">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
-          <p className="text-lg leading-relaxed mb-8">
-            "Hans Steel Canada is committed to providing customers with satisfaction, guaranteed quality, competitive cost
-            and accomplished delivery. How can we do that? Hans Steel Canada has constructed an 160,000 square foot, fully
-            automated fabrication plant, located in Uxbridge, Ontario, which includes cutting, drilling, welding,
-            sandblasting and painting all under one roof and managed by a state of the art ERP system."
-          </p>
+      {/* Facility Statement Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTEyIDBjMy4zMTQgMCA2IDIuNjg2IDYgNnMtMi42ODYgNi02IDYtNi0yLjY4Ni02LTYgMi42ODYtNiA2LTZ6IiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L2c+PC9zdmc+')] opacity-20"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20 shadow-2xl">
+              <p className="text-xl md:text-2xl leading-relaxed font-light text-center">
+                "Hans Steel Canada is committed to providing customers with satisfaction, guaranteed quality, competitive cost
+                and accomplished delivery. How can we do that? Hans Steel Canada has constructed an 160,000 square foot, fully
+                automated fabrication plant, located in Uxbridge, Ontario, which includes cutting, drilling, welding,
+                sandblasting and painting all under one roof and managed by a state of the art ERP system."
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="contact" className="py-12 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <div className="space-y-2">
-              <p className="flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <a className="hover:text-[#0b7ed4]" href="tel:+19056401000">+1 (905) 640-1000</a>
-                <span className="mx-2">|</span>
-                <a className="hover:text-[#0b7ed4]" href="tel:+19056403000">+1 (905) 640-3000</a>
-              </p>
-              <p className="text-gray-400">6 Staverton Road, Uxbridge, ON, L9P 0C5</p>
+      {/* Certifications Section */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <span className="text-2xl font-bold text-slate-700">AISC</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <span className="text-2xl font-bold text-slate-700">CSA</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <span className="text-2xl font-bold text-slate-700">ISO</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <span className="text-2xl font-bold text-slate-700">CWB</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="inline-block px-8 py-4 bg-slate-100 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <span className="text-2xl font-bold text-slate-700">TEKLA</span>
+              </div>
             </div>
           </div>
         </div>
