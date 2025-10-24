@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState } from 'react'
 
 const Home: NextPage = () => {
@@ -8,11 +8,26 @@ const Home: NextPage = () => {
 
   const slides = [
     {
-      image: '/images/project1.jpg',
+      image: 'https://placehold.co/1920x800/334155/ffffff?text=Crosstown+LRT',
       title: 'Crosstown LRT',
-      subtitle: 'Mount Dennis Station and EMSF'
+      subtitle: 'Mount Dennis Station and EMSF',
+      link: '/projects'
+    },
+    {
+      image: 'https://placehold.co/1920x800/475569/ffffff?text=Steel+Fabrication',
+      title: 'Steel Fabrication',
+      subtitle: 'Advanced Manufacturing Facility',
+      link: '/projects'
     }
   ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
 
   return (
     <>
@@ -22,26 +37,63 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Hans Steel Canada" />
         <meta property="og:description" content="Engineering, production and construction of structural steel." />
-        <meta property="og:image" content="/images/steel-tower.jpg" />
       </Head>
 
-      <section className="relative h-[70vh] bg-gray-900">
+      {/* Hero Slider Section */}
+      <section className="relative h-[600px] bg-slate-900 overflow-hidden">
         <div className="relative h-full">
-          <Image
+          {/* Slider Image */}
+          <img
             src={slides[currentSlide].image}
             alt={slides[currentSlide].title}
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
 
-          <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 bg-black/70 text-white p-8 max-w-md">
-            <h2 className="text-3xl font-bold mb-2">{slides[currentSlide].title}</h2>
-            <p className="text-lg mb-6">{slides[currentSlide].subtitle}</p>
-            <button className="bg-white text-black px-6 py-2 font-semibold hover:bg-gray-100 transition-colors">
+          {/* Slide Content */}
+          <div className="absolute right-8 md:right-20 top-1/2 -translate-y-1/2 bg-black/80 backdrop-blur-sm text-white p-10 max-w-lg rounded-lg shadow-2xl border border-white/10">
+            <h2 className="text-4xl font-bold mb-3 tracking-tight">{slides[currentSlide].title}</h2>
+            <p className="text-xl mb-8 text-slate-200">{slides[currentSlide].subtitle}</p>
+            <Link 
+              href={slides[currentSlide].link}
+              className="inline-block bg-white text-slate-900 px-8 py-3 font-bold hover:bg-slate-100 transition-all duration-200 rounded shadow-lg hover:shadow-xl"
+            >
               Read More
-            </button>
+            </Link>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-200"
+            aria-label="Previous slide"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-200"
+            aria-label="Next slide"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/75'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
