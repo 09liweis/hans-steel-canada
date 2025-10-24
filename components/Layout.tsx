@@ -69,7 +69,7 @@ export function Footer() {
     { label: 'Projects', href: '/projects' },
     { label: 'Equipment', href: '/equipment' },
     { label: 'About Us', href: '/about' },
-    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Cookie Policy', href: '/cookies' },
     { label: 'Privacy Settings', href: '/settings' },
   ];
