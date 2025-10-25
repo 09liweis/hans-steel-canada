@@ -63,6 +63,33 @@ const HYDRO_POST_IMAGES = [
   }
 ];  
 
+const ORIOLLIA_CITY_HALL_IMAGES = [
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_1.png',
+    alt: 'Orillia City Hall 1'
+  },
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_2.png',
+    alt: 'Orillia City Hall 2'
+  },
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_3.png',
+    alt: 'Orillia City Hall 3'
+  },
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_4.png',
+    alt: 'Orillia City Hall 4'
+  },
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_5.png',
+    alt: 'Orillia City Hall 5'
+  },
+  {
+    src: '/images/projects/Orillia-City-Hall/Oriollia-project_6.png',
+    alt: 'Orillia City Hall 6'
+  }
+];    
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -129,11 +156,11 @@ const Projects: NextPage = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#c41e3a] to-red-700 rounded-full"></div>
             <div className="pl-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {Array.from({ length: 6 }, (_, i) => (
-                <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              {ORIOLLIA_CITY_HALL_IMAGES.map((image) => (
+                <div key={image.alt} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
                   <img
-                    src={`https://placehold.co/400x300/e2e8f0/64748b?text=Orillia+${i + 1}`}
-                    alt={`Orillia project ${i + 1}`}
+                    src={image.src}
+                    alt={image.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
