@@ -36,6 +36,33 @@ const CROSSTOWN_LRT_IMAGES = [
   }
 ];  
 
+const HYDRO_POST_IMAGES = [
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_01.png',
+    alt: 'Hydro Post 1'
+  },
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_02.png',
+    alt: 'Hydro Post 2'
+  },
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_03.png',
+    alt: 'Hydro Post 3'
+  },
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_04.png',
+    alt: 'Hydro Post 4'
+  },
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_05.png',
+    alt: 'Hydro Post 5'
+  },
+  {
+    src: '/images/projects/Hydro-Post/hydro-post_06.png',
+    alt: 'Hydro Post 6'
+  }
+];  
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -122,11 +149,11 @@ const Projects: NextPage = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-slate-900 tracking-tight">Hydro Post</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {Array.from({ length: 6 }, (_, i) => (
-              <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
+            {HYDRO_POST_IMAGES.map((image) => (
+              <div key={image.alt} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
                 <img
-                  src={`https://placehold.co/400x300/cbd5e1/475569?text=Hydro+${i + 1}`}
-                  alt={`Hydro Post project ${i + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
