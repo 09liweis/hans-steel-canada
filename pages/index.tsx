@@ -111,7 +111,7 @@ const Home: NextPage = () => {
             {/* ICI Building Structure */}
             <div className="group relative h-96 overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
               <img 
-                src="https://placehold.co/800x600/475569/ffffff?text=ICI+Building" 
+                src="/images/home/ic-building-structure.png" 
                 alt="ICI Building Structure" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
             {/* Monopole Steel Tower */}
             <div className="group relative h-96 overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
               <img 
-                src="https://placehold.co/800x600/64748b/ffffff?text=Steel+Tower" 
+                src="/images/home/mono-pole-steel-tower.png" 
                 alt="Monopole Steel Tower" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -225,18 +225,19 @@ const Home: NextPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-900 tracking-tight">Professional Equipment</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
-              { name: 'Python 5 Bevel II', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Python+5' },
-              { name: 'CNC 3 Dimensional High Speed Drilling Line', image: 'https://placehold.co/200x200/cbd5e1/475569?text=CNC+3D' },
-              { name: 'CNC Plasma Tubular Profiling Machine', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=CNC+Plasma' },
-              { name: 'Gantry Plate-Drilling Machine', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Gantry' },
-              { name: 'Rotating Saw', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Rotating+Saw' },
-              { name: 'Submerged Arc Welding', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Welding' },
-              { name: 'SandBlasting Machine', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=SandBlast' },
-              { name: 'Shear', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Shear' },
-              { name: 'Press Brake', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Press+Brake' },
-              { name: 'Plasma Cutting Machine', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Plasma+Cut' },
-              { name: 'Steel Tower Pre-fit Jig Station', image: 'https://placehold.co/200x200/e2e8f0/64748b?text=Jig+Station' },
-              { name: 'Sub-Merged Arc Line For Tubular Structures', image: 'https://placehold.co/200x200/cbd5e1/475569?text=Arc+Line' }
+              { name: 'Python-X Beam LI', image: '/images/home/equipments/1-Python-X-Beam-LI.png' },
+              { name: 'CNC 3-Dimensional High-Speed Drilling Line', image: '/images/home/equipments/3CNC-3-Dimensional-High-Speed-Drilling-Line_500x500.png' },
+              { name: 'CNC Plasma Tubular Profiling Machine', image: '/images/home/equipments/4-5CNC-Plasma-Tubular-Profiling-Machine_500x500.png' },
+              { name: 'Gantry Plate-Drilling Machine', image: '/images/home/equipments/5-Gantry-Plate-Drilling-Machine_500x500.png' },
+              { name: 'Rotating Saw', image: '/images/home/equipments/6-Rotating-Saw_500x500.png' },
+              { name: 'Submerged Arc Welding Saw', image: '/images/home/equipments/10-Submerged-Arc-Welding-Saw_500x500.png' },
+              { name: 'Sandblasting Machine', image: '/images/home/equipments/11a-Sandblasting-Machine_500x500.png' },
+              { name: 'Shear', image: '/images/home/equipments/11b-Shear_500x500.png' },
+              { name: 'Press Brake', image: '/images/home/equipments/12-Press-Brake_500x500.png' },
+              { name: 'Plasma Cutting Machine', image: '/images/home/equipments/14-Plasma-Cutting-Machine_500x500.png' },
+              { name: 'Steel Tower Pre-fit Up Station', image: '/images/home/equipments/15-Steel-Tower-Pre-fit-Up-Station_500x500.png' },
+              { name: 'Sub-Merged Arc Line For Tubular Structures', image: '/images/home/equipments/16-Sub-Merged-Arc-Line-For-Tubular-Structures_500x500.png' },
+      
             ].map((equipment, index) => (
               <div key={index} className="group text-center">
                 <div className="relative mb-4 overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
