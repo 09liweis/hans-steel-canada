@@ -8,15 +8,21 @@ const Home: NextPage = () => {
 
   const slides = [
     {
-      image: 'https://placehold.co/1920x800/334155/ffffff?text=Crosstown+LRT',
-      title: 'Crosstown LRT',
-      subtitle: 'Mount Dennis Station and EMSF',
+      image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/11/bg_hero_1600x868.jpg',
+      title: '25+ Years of International Experiences',
+      subtitle: '98% on-time deliveries Best lead-times in the industry Always prepared with a contingency plan',
       link: '/projects'
     },
     {
-      image: 'https://placehold.co/1920x800/475569/ffffff?text=Steel+Fabrication',
+      image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/11/orillia_07_1600x868.jpg',
       title: 'Steel Fabrication',
       subtitle: 'Advanced Manufacturing Facility',
+      link: '/projects'
+    },
+    {
+      image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/10/lrt_01_1600x868.jpg',
+      title: 'Crosstown LRT',
+      subtitle: 'Mount Dennis Station and EMSF',
       link: '/projects'
     }
   ]
