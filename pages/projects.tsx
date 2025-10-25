@@ -2,6 +2,21 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
+const BRAMPTON_CORNER_IMAGES = [
+  {
+    src: '/images/projects/Brampton-Corner/brampton_corner_cru.png',
+    alt: 'Brampton Corner CRU'
+  },
+  {
+    src: '/images/projects/Brampton-Corner/brampton_corner_pad1.png',
+    alt: 'Brampton Corner PAD1'
+  },
+  {
+    src: '/images/projects/Brampton-Corner/brampton_corner_pad2.png',
+    alt: 'Brampton Corner PAD2'
+  }
+];
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -70,7 +85,7 @@ const Projects: NextPage = () => {
             <div className="pl-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {Array.from({ length: 6 }, (_, i) => (
                 <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                  <img 
+                  <img
                     src={`https://placehold.co/400x300/e2e8f0/64748b?text=Orillia+${i + 1}`}
                     alt={`Orillia project ${i + 1}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -90,7 +105,7 @@ const Projects: NextPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {Array.from({ length: 6 }, (_, i) => (
               <div key={i} className="group relative aspect-[4/3] bg-slate-200 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                <img 
+                <img
                   src={`https://placehold.co/400x300/cbd5e1/475569?text=Hydro+${i + 1}`}
                   alt={`Hydro Post project ${i + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -118,7 +133,7 @@ const Projects: NextPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {Array.from({ length: 4 }, (_, i) => (
               <div key={i} className="group relative aspect-video bg-slate-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                <img 
+                <img
                   src={`https://placehold.co/600x400/334155/cbd5e1?text=LRT+${i + 1}`}
                   alt={`Crosstown LRT ${i + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -133,25 +148,28 @@ const Projects: NextPage = () => {
       {/* Feihe International */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 text-center lg:text-left">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 tracking-tight">Feihe International</h2>
-                <p className="text-2xl text-slate-600 mb-8 font-light">Kingston Ontario Project</p>
-                <div className="inline-block bg-gradient-to-br from-slate-100 to-slate-50 px-16 py-12 rounded-2xl shadow-lg border border-slate-200 mb-8">
-                  <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c41e3a] to-red-700 mb-3">FIRMUS</div>
-                  <div className="text-base text-slate-600 tracking-wide">长寿之乡</div>
-                </div>
-                <p className="text-2xl font-semibold text-slate-700">coming soon to Canada</p>
-              </div>
-              <div className="order-1 lg:order-2">
-                <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="https://placehold.co/800x600/e2e8f0/64748b?text=Feihe+Project"
-                    alt="Feihe International Project"
-                    className="w-full h-full object-cover"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 tracking-tight">Feihe International</h2>
+              <p className="text-2xl text-slate-600 mb-8 font-light">Kingston Ontario Project</p>
+              <div className="inline-block rounded mb-2">
+                <div className="text-base text-slate-600 tracking-wide">
+                  <img
+                    src="/images/projects/FIRMUS.png"
+                    alt="FIRMUS飞鹤 Project"
+                    className="w-[300px] h-[50px] object-cover"
                   />
                 </div>
+              </div>
+              <p className="text-2xl font-semibold text-slate-700">coming soon to Canada</p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/projects/Feihe-Project.png"
+                  alt="Feihe International Project"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -167,11 +185,11 @@ const Projects: NextPage = () => {
             <div className="h-1 w-24 bg-gradient-to-r from-[#c41e3a] to-red-700 mt-6 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {Array.from({ length: 3 }, (_, i) => (
-              <div key={i} className="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
-                <img 
-                  src={`https://placehold.co/800x600/cbd5e1/475569?text=Brampton+${i + 1}`}
-                  alt={`Brampton Corner ${i + 1}`}
+            {BRAMPTON_CORNER_IMAGES.map((image) => (
+              <div key={image.alt} className="group relative aspect-video bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                <img
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -187,8 +205,8 @@ const Projects: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Kingston C.H */}
             <div className="group relative bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 text-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-80">
-              <img 
-                src="https://placehold.co/1200x800/1e293b/cbd5e1?text=Kingston+CH"
+              <img
+                src="/images/projects/kingston.png"
                 alt="Kingston C.H"
                 className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500"
               />
@@ -201,13 +219,13 @@ const Projects: NextPage = () => {
 
             {/* Dodge Hausville */}
             <div className="group relative bg-gradient-to-br from-slate-600 via-slate-700 to-slate-800 text-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-80">
-              <img 
-                src="https://placehold.co/1200x800/334155/cbd5e1?text=Dodge+Hausville"
+              <img
+                src="/images/projects/dodge.png"
                 alt="Dodge Hausville"
                 className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500"
               />
               <div className="relative z-10 h-full flex flex-col justify-end p-10">
-                <h3 className="text-3xl md:text-4xl font-bold tracking-tight">Dodge Hausville</h3>
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight">Dodge Hunsville</h3>
                 <div className="h-1 w-16 bg-gradient-to-r from-[#c41e3a] to-red-700 mt-4 rounded-full"></div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
