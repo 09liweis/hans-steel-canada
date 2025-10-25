@@ -17,6 +17,25 @@ const BRAMPTON_CORNER_IMAGES = [
   }
 ];
 
+const CROSSTOWN_LRT_IMAGES = [
+  {
+    src: '/images/projects/Crosstown-LRT/lrt_0.png',
+    alt: 'Crosstown LRT 0'
+  },
+  {
+    src: '/images/projects/Crosstown-LRT/lrt_1.png',
+    alt: 'Crosstown LRT 1'
+  },
+  {
+    src: '/images/projects/Crosstown-LRT/lrt_2.png',
+    alt: 'Crosstown LRT 2'
+  },
+  {
+    src: '/images/projects/Crosstown-LRT/lrt_3.png',
+    alt: 'Crosstown LRT 3'
+  }
+];  
+
 const Projects: NextPage = () => {
   return (
     <>
@@ -131,11 +150,11 @@ const Projects: NextPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {Array.from({ length: 4 }, (_, i) => (
-              <div key={i} className="group relative aspect-video bg-slate-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
+            {CROSSTOWN_LRT_IMAGES.map((image) => (
+              <div key={image.alt} className="group relative aspect-video bg-slate-700 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
                 <img
-                  src={`https://placehold.co/600x400/334155/cbd5e1?text=LRT+${i + 1}`}
-                  alt={`Crosstown LRT ${i + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
