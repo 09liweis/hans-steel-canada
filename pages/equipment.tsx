@@ -16,11 +16,10 @@ const Equipment: NextPage = () => {
         name: "CNC 3-Dimensional High-Speed Drilling Line",
         subtitle: "Advanced Precision Drilling Technology",
         description: "Our CNC 3-Dimensional High-Speed Drilling Line represents the pinnacle of structural steel drilling technology. This advanced system delivers unmatched precision and speed, capable of drilling complex hole patterns in beams, plates, and angles with exceptional accuracy. The high-speed capabilities significantly reduce production time while maintaining the highest quality standards.",
-        mainImage: "https://images.unsplash.com/photo-1713371398484-cc4e4f6a262a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
+        mainImage: "/images/equipment/cnc_3/equipment_3_0.png",
         images: [
-          "https://images.unsplash.com/photo-1666634157070-6fd830fb5672?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1711418235334-8895331a6cf9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.pexels.com/photos/50691/drill-milling-milling-machine-drilling-50691.jpeg"
+          "/images/equipment/cnc_3/equipment_3_1.png",
+          "/images/equipment/cnc_3/equipment_3_2.png",
         ]
       },
       {
@@ -209,11 +208,11 @@ const Equipment: NextPage = () => {
                   </div>
 
                   {/* Image Gallery */}
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {equipment.images.map((image, imgIndex) => (
                       <div 
                         key={imgIndex} 
-                        className="relative h-32 md:h-40 rounded-lg overflow-hidden"
+                        className="relative h-32 md:h-40 rounded overflow-hidden"
                       >
                         <Image
                           src={image}
