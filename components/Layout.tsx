@@ -123,7 +123,7 @@ export function Footer() {
                   <div>CANADA</div>
                 </div>
                 <div className="space-y-1.5 text-xs">
-                  <a href="#" className="block text-white hover:text-[#c41e3a] transition-colors">View Online</a>
+                  <Link href="/brochure" className="block text-white hover:text-[#c41e3a] transition-colors">View Online</Link>
                   <a href="/pdf/brochure.pdf" className="block text-white hover:text-[#c41e3a] transition-colors">PDF Download</a>
                 </div>
               </div>
