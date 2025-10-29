@@ -7,10 +7,11 @@ This is a Next.js website migrated from Vercel to Replit. The application is a c
 ### October 29, 2025 - Vercel to Replit Migration
 - Configured Next.js to bind to port 5000 with host 0.0.0.0 for Replit compatibility
 - Updated package.json scripts (dev and start commands)
-- Added allowedDevOrigins configuration to next.config.js for cross-origin requests
+- Added allowedDevOrigins configuration to next.config.js using REPLIT_DEV_DOMAIN environment variable for security
 - Configured workflow to run Next.js development server
 - Configured deployment settings for autoscale deployment
 - Installed all dependencies with npm
+- **Note**: Cross-origin warnings in logs are future deprecation notices for Next.js 15+, not blocking issues. App is fully functional.
 
 ## Project Architecture
 
