@@ -27,11 +27,10 @@ const Equipment: NextPage = () => {
         name: "CNC Plasma Tubular Profiling Machine",
         subtitle: "Maximum Profiling Thickness 50mm or 2-inch",
         description: "The CNC Plasma Tubular Profiling Machine is designed for precise cutting and profiling of tubular structures. With the capability to handle materials up to 50mm (2-inch) thickness, this machine delivers clean, accurate cuts on pipes, tubes, and hollow sections. The advanced CNC control ensures repeatable precision across all production runs.",
-        mainImage: "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg",
+        mainImage: "/images/equipment/cnc/cnc_plasma_01.png",
         images: [
-          "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85"
+          "/images/equipment/cnc/cnc_plasma_02.png",
+          "/images/equipment/cnc/cnc_plasma_03.png"
         ]
       },
       {
@@ -39,11 +38,10 @@ const Equipment: NextPage = () => {
         name: "Gantry Plate Drilling Machine",
         subtitle: "High-Capacity Plate Processing",
         description: "Our Gantry Plate Drilling Machine offers exceptional versatility for drilling large steel plates with precision. The gantry design provides superior stability and access to the entire work surface, making it ideal for processing oversized plates commonly used in structural steel construction and heavy fabrication projects.",
-        mainImage: "https://images.unsplash.com/photo-1757266705787-c319b6495b72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMHByb2Nlc3Npbmd8ZW58MHx8fHwxNzYxMjUxMjY5fDA&ixlib=rb-4.1.0&q=85",
+        mainImage: "/images/equipment/gantry/gantry_01.png",
         images: [
-          "https://images.pexels.com/photos/5846114/pexels-photo-5846114.jpeg",
-          "https://images.pexels.com/photos/5845923/pexels-photo-5845923.jpeg",
-          "https://images.pexels.com/photos/34404305/pexels-photo-34404305.jpeg"
+          "/images/equipment/gantry/gantry_02.png",
+          "/images/equipment/gantry/gantry_03.png"
         ]
       },
       {
@@ -51,11 +49,10 @@ const Equipment: NextPage = () => {
         name: "Rotating Saw",
         subtitle: "Precision Cutting for Structural Steel",
         description: "The Rotating Saw system provides accurate angular cuts on structural steel members. With its ability to rotate and position the cutting blade at precise angles, this equipment ensures perfect miters and bevels for complex structural connections. The high-powered cutting capacity handles even the heaviest sections with ease.",
-        mainImage: "https://images.pexels.com/photos/5532661/pexels-photo-5532661.jpeg",
+        mainImage: "/images/equipment/rotating_saw/rotating_saw_01.png",
         images: [
-          "https://images.unsplash.com/photo-1666618090858-fbcee636bd3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1713371398484-cc4e4f6a262a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1666634157070-6fd830fb5672?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85"
+          "/images/equipment/rotating_saw/rotating_saw_02.png",
+          "/images/equipment/rotating_saw/rotating_saw_03.png"
         ]
       },
       {
@@ -63,47 +60,35 @@ const Equipment: NextPage = () => {
         name: "Submerged Arc Welding Saw",
         subtitle: "High-Quality Automated Welding",
         description: "Our Submerged Arc Welding (SAW) system delivers superior weld quality through automated processes. This technology produces strong, clean welds with deep penetration, ideal for heavy structural fabrication. The submerged arc process minimizes spatter and produces consistent, high-integrity welds on thick materials.",
-        mainImage: "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-        images: [
-          "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1715783058277-812b50959e10?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85"
-        ]
+        mainImage: "/images/equipment/submerged_arc_welding_saw/submerged_arc_welding_saw.png",
+        images:[]
       },
       {
         id: 6,
         name: "Sandblasting Machine",
         subtitle: "Surface Preparation Excellence",
         description: "The Sandblasting Machine provides thorough surface preparation for steel components before coating or painting. This equipment removes mill scale, rust, and contaminants, creating an ideal surface profile for optimal coating adhesion. Our sandblasting capability ensures superior finish quality and long-lasting corrosion protection.",
-        mainImage: "https://images.pexels.com/photos/5846114/pexels-photo-5846114.jpeg",
-        images: [
-          "https://images.pexels.com/photos/5845923/pexels-photo-5845923.jpeg",
-          "https://images.unsplash.com/photo-1757266705787-c319b6495b72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMHByb2Nlc3Npbmd8ZW58MHx8fHwxNzYxMjUxMjY5fDA&ixlib=rb-4.1.0&q=85",
-          "https://images.pexels.com/photos/34404305/pexels-photo-34404305.jpeg"
-        ]
+        mainImage: "/images/equipment/sandblasting/sandblasting.png",
+        images: []
       },
       {
         id: 7,
         name: "Shear",
         subtitle: "Powerful Cutting Capability",
         description: "Our industrial Shear delivers clean, straight cuts on steel plates and sheets. With high tonnage capacity, this equipment can process thick materials efficiently, making it essential for preparing stock material for fabrication. The precision cutting action ensures minimal material waste and square edges for subsequent processing.",
-        mainImage: "https://images.unsplash.com/photo-1711418235334-8895331a6cf9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-        images: [
-          "https://images.pexels.com/photos/50691/drill-milling-milling-machine-drilling-50691.jpeg",
-          "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg",
-          "https://images.unsplash.com/photo-1666618090858-fbcee636bd3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85"
-        ]
+        mainImage: "/images/equipment/shear/shear.png",
+        images: []
       },
       {
         id: 8,
         name: "Press Brake Machine",
         subtitle: "Precision Bending Technology",
         description: "The Press Brake Machine offers precise bending and forming of steel plates and sheets. With advanced CNC controls, this equipment produces accurate bends at specified angles, essential for creating brackets, connections, and formed components. The high tonnage capacity handles thick materials while maintaining tight tolerances.",
-        mainImage: "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg",
+        mainImage: "/images/equipment/press_brake/press_brake_01.png",
         images: [
-          "https://images.unsplash.com/photo-1666634157070-6fd830fb5672?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1713371398484-cc4e4f6a262a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1711418235334-8895331a6cf9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxDTkMlMjBtYWNoaW5lfGVufDB8fHx8MTc2MTI1MTI2NHww&ixlib=rb-4.1.0&q=85"
+          "/images/equipment/press_brake/press_brake_02.png",
+          "/images/equipment/press_brake/press_brake_03.png",
+          "/images/equipment/press_brake/press_brake_04.png"
         ]
       },
       {
@@ -111,23 +96,32 @@ const Equipment: NextPage = () => {
         name: "Plasma Cutting Machine",
         subtitle: "High-Speed Thermal Cutting",
         description: "Our Plasma Cutting Machine provides fast, precise cutting of steel plates using high-temperature plasma arc technology. This equipment excels at cutting intricate shapes and patterns with minimal heat-affected zones. The CNC-controlled system ensures consistent quality and can process multiple parts simultaneously for maximum efficiency.",
-        mainImage: "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
+        mainImage: "/images/equipment/plasma_cutting_machine/plasma_cutting_machine_01.png",
         images: [
-          "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1715783058277-812b50959e10?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHw0fHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85"
+          "/images/equipment/plasma_cutting_machine/plasma_cutting_machine_02.png",
+          "/images/equipment/plasma_cutting_machine/plasma_cutting_machine_03.png",
         ]
       },
       {
         id: 10,
+        name: "Steel Tower Pre-fit Up Station",
+        subtitle: "Efficient Tower Assembly",
+        description: "The Steel Tower Pre-fit Up Station is designed for the efficient assembly of steel tower components. This station allows for the precise alignment and fitting of tower sections before final welding and erection. The pre-fit process ensures that all components fit together seamlessly, reducing on-site assembly time and improving overall project efficiency.",
+        mainImage: "/images/equipment/steel_tower_pre_fit_up_station/steel_tower_pre_fit_up_station_01.png",
+        images: [
+          "/images/equipment/steel_tower_pre_fit_up_station/steel_tower_pre_fit_up_station_02.png",
+          "/images/equipment/steel_tower_pre_fit_up_station/steel_tower_pre_fit_up_station_03.png",
+        ]
+      },
+      {
+        id: 11,
         name: "Sub-Merged Arc Line for Tubular Structures",
         subtitle: "Specialized Tubular Welding",
         description: "The Sub-Merged Arc Line for Tubular Structures is specifically designed for welding monopole towers, transmission poles, and other large tubular assemblies. This specialized equipment produces high-quality longitudinal and circumferential welds on tubular members, ensuring structural integrity for critical infrastructure projects.",
-        mainImage: "https://images.pexels.com/photos/5532661/pexels-photo-5532661.jpeg",
+        mainImage: "/images/equipment/sub_merged_arc_line/sub_merged_arc_line_01.png",
         images: [
-          "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZ3xlbnwwfHx8fDE3NjExOTQyMDl8MA&ixlib=rb-4.1.0&q=85",
-          "https://images.pexels.com/photos/5846114/pexels-photo-5846114.jpeg"
+          "/images/equipment/sub_merged_arc_line/sub_merged_arc_line_02.png",
+          "/images/equipment/sub_merged_arc_line/sub_merged_arc_line_03.png",
         ]
       }
     ]
@@ -208,7 +202,8 @@ const Equipment: NextPage = () => {
                   </div>
 
                   {/* Image Gallery */}
-                  <div className="grid grid-cols-2 gap-4">
+                  {equipment.images.length > 0 && (
+                  <div className={`grid ${equipment.images.length > 2 ? 'grid-cols-3':'grid-cols-2'} gap-4`}>
                     {equipment.images.map((image, imgIndex) => (
                       <div 
                         key={imgIndex} 
@@ -224,6 +219,7 @@ const Equipment: NextPage = () => {
                       </div>
                     ))}
                   </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -235,7 +231,7 @@ const Equipment: NextPage = () => {
       <section className="relative h-[70vh] min-h-[600px] bg-gray-900">
         <div className="relative h-full">
           <Image
-            src="https://images.pexels.com/photos/34404305/pexels-photo-34404305.jpeg"
+            src="/images/equipment/steel_tower/steel_tower.png"
             alt="Steel Tower"
             fill
             style={{ objectFit: 'cover' }}
