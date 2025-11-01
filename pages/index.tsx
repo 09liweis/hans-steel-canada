@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import MetaHead from '../components/MetaHead';
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -37,13 +37,10 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Hans Steel Canada — Structural Steel Fabrication</title>
-        <meta name="description" content="Hans Steel Canada — engineering, production and construction of structural steel for industrial, commercial and institutional projects." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Hans Steel Canada" />
-        <meta property="og:description" content="Engineering, production and construction of structural steel." />
-      </Head>
+      <MetaHead
+        title="Hans Steel Canada — Structural Steel Fabrication"
+        description="Hans Steel Canada — engineering, production and construction of structural steel for industrial, commercial and institutional projects."
+      />
 
       {/* Hero Slider Section */}
       <section className="relative h-[600px] bg-slate-900 overflow-hidden">
