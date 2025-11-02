@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       />
 
       {/* Hero Slider Section */}
-      <section className="relative h-[600px] bg-slate-900 overflow-hidden">
+      <section className="relative h-[90vh] bg-slate-900 overflow-hidden">
         <div className="relative h-full">
           {/* Slider Image */}
           <img
