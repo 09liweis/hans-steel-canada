@@ -184,16 +184,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-wrap items-center justify-center gap-8 grayscale opacity-60">
-            <div className="text-xs font-bold border border-gray-600 px-4 py-2">AISC</div>
-            <div className="text-xs font-bold border border-gray-600 px-4 py-2 rounded-full">CSA</div>
-            <div className="text-xs font-bold border border-gray-600 px-4 py-2">ISO</div>
-            <div className="text-xs font-bold border border-gray-600 px-4 py-2">CWB</div>
-            <div className="text-xs font-bold border border-gray-600 px-4 py-2">TEKLA</div>
-          </div>
-        </div>
       </div>
     </footer>
   )
