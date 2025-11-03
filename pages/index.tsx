@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import MetaHead from '../components/MetaHead';
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const Home: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -35,6 +35,53 @@ const Home: NextPage = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
+  // Drag / swipe support
+  const startXRef = useRef<number | null>(null)
+  const pointerIdRef = useRef<number | null>(null)
+  const isDraggingRef = useRef(false)
+  const [translateX, setTranslateX] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const SWIPE_THRESHOLD = 80
+
+  const onPointerDown = (e: any) => {
+    // Only left mouse / touch
+    startXRef.current = e.clientX
+    pointerIdRef.current = e.pointerId
+    isDraggingRef.current = true
+    setIsDragging(true)
+    // capture pointer so we keep receiving move/up events
+    try {
+      (e.currentTarget as Element).setPointerCapture(e.pointerId)
+    } catch (err) {
+      // ignore in older browsers
+    }
+  }
+
+  const onPointerMove = (e: any) => {
+    if (!isDraggingRef.current || pointerIdRef.current !== e.pointerId || startXRef.current === null) return
+    const delta = e.clientX - startXRef.current
+    setTranslateX(delta)
+  }
+
+  const finishDrag = (e?: any) => {
+    const delta = translateX
+    // navigate if beyond threshold
+    if (delta > SWIPE_THRESHOLD) {
+      prevSlide()
+    } else if (delta < -SWIPE_THRESHOLD) {
+      nextSlide()
+    }
+    // reset
+    isDraggingRef.current = false
+    pointerIdRef.current = null
+    startXRef.current = null
+    setTranslateX(0)
+    setIsDragging(false)
+    if (e) {
+      try { (e.currentTarget as Element).releasePointerCapture(e.pointerId) } catch (err) {}
+    }
+  }
+
   return (
     <>
       <MetaHead
@@ -46,12 +93,31 @@ const Home: NextPage = () => {
       {/* Hero Slider Section */}
       <section className="relative h-[90vh] bg-slate-900 overflow-hidden">
         <div className="relative h-full">
-          {/* Slider Image */}
-          <img
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
-            className="w-full h-full object-cover"
-          />
+          {/* Slider Image (draggable) */}
+          <div
+            className="w-full h-full"
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={finishDrag}
+            onPointerCancel={finishDrag}
+            onPointerLeave={finishDrag}
+            // allow vertical scrolling while handling horizontal drag
+            style={{ touchAction: 'pan-y' }}
+          >
+            <div
+              className="w-full h-full"
+              style={{
+                transform: `translateX(${translateX}px)`,
+                transition: isDragging ? 'none' : 'transform 300ms ease'
+              }}
+            >
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
 
           {/* Slide Content */}
@@ -117,9 +183,6 @@ const Home: NextPage = () => {
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <h3 className="text-3xl font-bold mb-3 tracking-tight">ICI Building Structure</h3>
                 <p className="text-lg text-slate-200">Industrial, Commercial & Institutional</p>
-                <div className="mt-6 inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30 text-sm font-semibold">
-                  Learn More →
-                </div>
               </div>
             </div>
 
@@ -134,9 +197,6 @@ const Home: NextPage = () => {
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <h3 className="text-3xl font-bold mb-3 tracking-tight">Monopole Steel Tower</h3>
                 <p className="text-lg text-slate-200">Utility Transmission, Distribution & Tele-Communication Tower</p>
-                <div className="mt-6 inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30 text-sm font-semibold">
-                  Learn More →
-                </div>
               </div>
             </div>
           </div>
