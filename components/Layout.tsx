@@ -179,7 +179,7 @@ export function Footer() {
               <div className="text-base">CANADA</div>
             </div>
             <div className="text-sm">
-              <p className="text-gray-400">© 2025 All Rights Reserved</p>
+              <p className="text-gray-400">© {new Date().getFullYear()} All Rights Reserved</p>
               <p className="font-semibold mt-2">HANS STEEL CANADA</p>
             </div>
           </div>
