@@ -101,7 +101,7 @@ const ProjectGallery: React.FC<{ project: Project; isEven: boolean }> = ({ proje
 
       {selectedImage && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-          <div className="relative w-full max-w-4xl max-h-96 md:max-h-screen rounded-xl overflow-hidden" onClick={e => e.stopPropagation()}>
+          <div className="relative w-full max-w-4xl h-96 md:h-screen rounded-xl overflow-hidden" onClick={e => e.stopPropagation()}>
             <Image
               src={selectedImage}
               alt="Project detail"
