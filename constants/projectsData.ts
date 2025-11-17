@@ -212,19 +212,9 @@ export const projectsData = [
       "/images/projects-new/transmission_tower/02.png",
       "/images/projects-new/transmission_tower/03.png",
       "/images/projects-new/transmission_tower/04.png",
-    ]
-  },
-
-  {
-    id: 'transmission_tower',
-    title:'transmission_tower',
-    features:[
-      
-    ],
-    mainImage: "/images/projects-new/transmission_tower/04.png",
-    images:[
       "/images/projects-new/transmission_tower/05.png",
       "/images/projects-new/transmission_tower/06.png",
+      "/images/projects-new/transmission_tower/07.png",
     ]
-  },
+  }
 ]
