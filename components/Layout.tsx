@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from 'react'
 import Link from 'next/link'
+import { COMPANY_ADDRESS } from '../constants/text';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -36,7 +37,7 @@ export function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              6 Sangster Road, Uxbridge, ON, L9P 0G5
+              {COMPANY_ADDRESS}
             </div>
             <div className="md:hidden text-gray-600 text-xs">
               <a href="tel:+19056401000" className="hover:text-red-700">+1 (905) 640-1000</a>
