@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { CONTACT_PHONE } from '../constants/text'
+import { formatPhoneSimple } from '../constants/text'
 
 const Services: NextPage = () => {
   const services = [
@@ -158,7 +158,7 @@ const Services: NextPage = () => {
                   Please contact our Sales Department for inquiries of any type. We welcome the feedback and look forward to assisting you.
                 </p>
                 <p className="text-lg leading-relaxed mt-4">
-                  The best way to get in touch is to call <span className="font-bold text-[#c41e3a]">{CONTACT_PHONE.replace('+1', '+1 ').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}</span>.
+                  The best way to get in touch is to call <span className="font-bold text-[#c41e3a]">{formatPhoneSimple()}</span>.
                 </p>
                 <p className="text-lg leading-relaxed">
                   Or submit this form. We check our email inboxes regularly.
