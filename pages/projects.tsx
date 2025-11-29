@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 import { projectsData } from '../constants/projectsData'
+import { CONTACT_PHONE } from '../constants/text'
 
 const formatTitle = (title: string): string => {
   return title
@@ -189,7 +190,7 @@ const Projects: NextPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+19056401000"
+                href={`tel:${CONTACT_PHONE}`}
                 className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 font-semibold hover:from-amber-600 hover:to-amber-700 transition-all duration-300 rounded-lg inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { CONTACT_PHONE } from '../constants/text'
 
 const Equipment: NextPage = () => {
   const equipmentData = {
@@ -282,7 +283,7 @@ const Equipment: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="tel:+19056401000" 
+              href={`tel:${CONTACT_PHONE}`} 
               className="bg-[#c41e3a] text-white px-8 py-3 font-semibold hover:bg-[#a01829] transition-colors rounded inline-flex items-center gap-2"
               data-testid="contact-phone-cta"
             >
