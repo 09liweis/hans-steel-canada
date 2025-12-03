@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { COMPANY_ADDRESS, CONTACT_PHONE, formatPhoneWithParentheses } from '../constants/text';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
 
   const headerMenu = [
     { label: 'Home', href: '/' },
@@ -58,7 +60,15 @@ export default function Header() {
 
             <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
               {headerMenu.map((item) => (
-                <Link key={item.href} className="text-gray-700 hover:text-[#c41e3a] transition-colors" href={item.href}>
+                <Link 
+                  key={item.href} 
+                  className={`transition-colors ${
+                    router.pathname === item.href 
+                      ? 'text-[#c41e3a] font-semibold' 
+                      : 'text-gray-700 hover:text-[#c41e3a]'
+                  }`} 
+                  href={item.href}
+                >
                   {item.label}
                 </Link>
               ))}
@@ -87,7 +97,11 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block py-3 text-gray-700 hover:text-[#c41e3a] hover:bg-gray-50 transition-colors px-4 -mx-4"
+                  className={`block py-3 transition-colors px-4 -mx-4 ${
+                    router.pathname === item.href
+                      ? 'text-[#c41e3a] bg-gray-50 font-semibold'
+                      : 'text-gray-700 hover:text-[#c41e3a] hover:bg-gray-50'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
