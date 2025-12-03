@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { CONTACT_PHONE, formatPhoneWithSpaces } from '../constants/text'
+import { COMPANY_NAME, CONTACT_PHONE, formatPhoneWithSpaces } from '../constants/text'
 
 export default function Footer() {
   const footerMenu = [
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
             <div className="text-sm">
               <p className="text-gray-400">&copy; {new Date().getFullYear()} All Rights Reserved</p>
-              <p className="font-semibold mt-2">HANS STEEL CANADA</p>
+              <p className="font-semibold mt-2">{COMPANY_NAME}</p>
             </div>
           </div>
         </div>
