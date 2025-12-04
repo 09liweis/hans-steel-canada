@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { COMPANY_NAME, CONTACT_PHONE, formatPhoneWithSpaces } from '../constants/text'
+import { COMPANY_ADDRESS, COMPANY_NAME, CONTACT_PHONE, formatPhoneWithSpaces } from '../constants/text'
 
 export default function Footer() {
   const footerMenu = [
@@ -68,8 +68,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <div>
-                  6 Sangster Road<br />
-                  Uxbridge, ON, L9P 0G5
+                  {COMPANY_ADDRESS}
                 </div>
               </div>
             </div>

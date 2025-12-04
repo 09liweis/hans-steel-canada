@@ -1,6 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { COMPANY_ADDRESS } from '../constants/text'
 
 const CookiePolicy: NextPage = () => {
   return (
@@ -144,8 +145,7 @@ const CookiePolicy: NextPage = () => {
                 </p>
                 <div className="bg-gray-50 p-4 rounded border border-gray-200 mt-4">
                   <p className="font-semibold text-gray-900">Hans Steel Canada</p>
-                  <p className="text-gray-700">6 Sangster Road</p>
-                  <p className="text-gray-700">Uxbridge, ON L9P 0G5</p>
+                  <p className="text-gray-700">{COMPANY_ADDRESS}</p>
                   <p className="text-gray-700 mt-2">Email: info@hanssteel.com</p>
                 </div>
               </section>
