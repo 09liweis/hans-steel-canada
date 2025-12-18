@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { formatPhoneSimple } from '../constants/text'
+import { formatPhoneSimple, CONTACT_PHONE } from '../constants/text'
 
 const Services: NextPage = () => {
   const services = [
@@ -68,10 +68,10 @@ const Services: NextPage = () => {
             {/* Left Side - Brochure */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative group">
-                <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md transform group-hover:scale-105 transition-all duration-300">
+                <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md transform transition-all duration-300">
                   <div className="aspect-[3/4] bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg overflow-hidden shadow-inner">
                     <img 
-                      src="https://placehold.co/600x800/e2e8f0/475569?text=HANS+STEEL+Brochure"
+                      src="/images/brochure/hans-steel-brochure-p01.png"
                       alt="Hans Steel Brochure"
                       className="w-full h-full object-cover"
                     />
@@ -112,12 +112,19 @@ const Services: NextPage = () => {
                     </div>
                   </div>
                   <div className="mt-6 space-y-3">
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md">
+                    <a
+                      href="/pdf/brochure.pdf"
+                      download
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md text-center"
+                    >
                       Download PDF version
-                    </button>
-                    <button className="w-full bg-white hover:bg-slate-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-colors duration-200">
+                    </a>
+                    <a
+                      href="/brochure"
+                      className="block w-full bg-white hover:bg-slate-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-colors duration-200 text-center"
+                    >
                       or View it Online
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -158,7 +165,7 @@ const Services: NextPage = () => {
                   Please contact our Sales Department for inquiries of any type. We welcome the feedback and look forward to assisting you.
                 </p>
                 <p className="text-lg leading-relaxed mt-4">
-                  The best way to get in touch is to call <span className="font-bold text-[#c41e3a]">{formatPhoneSimple()}</span>.
+                  The best way to get in touch is to call <a href={`tel:${CONTACT_PHONE}`} className="font-bold text-[#c41e3a] hover:underline">{formatPhoneSimple()}</a>.
                 </p>
                 <p className="text-lg leading-relaxed">
                   Or submit this form. We check our email inboxes regularly.
