@@ -42,17 +42,16 @@ const Services: NextPage = () => {
       </Head>
 
       {/* Hero Section with Background Image */}
-      <section className="relative h-[500px] bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://placehold.co/1920x500/475569/ffffff?text=Hans+Steel+Services"
+            src="/images/services/banner.png"
             alt="Hans Steel Services"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex items-center">
-          <div className="text-white max-w-2xl">
+          <div className="text-white bg-black/70 p-10 max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Services</h1>
             <p className="text-xl md:text-2xl text-slate-200 leading-relaxed">
               HANS STEEL CANADA CORP.
