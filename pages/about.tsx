@@ -11,12 +11,14 @@ type FeatureCardProps = {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, bgColor, children }) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
-      <div className="flex items-center gap-3">
-        <div className={`${bgColor} text-white w-12 h-12 rounded flex items-center justify-center`}>{children}</div>
-        <h3 className="text-lg font-semibold">{title}</h3>
+    <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-lg transition-shadow border border-gray-100">
+      <div className="flex items-start gap-4">
+        <div className={`${bgColor} text-white w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0`}>{children}</div>
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <p className="mt-2 text-sm text-gray-600">{description}</p>
+        </div>
       </div>
-      <p className="mt-3 text-sm text-gray-600">{description}</p>
     </div>
   )
 }
@@ -84,52 +86,48 @@ const About: NextPage = () => {
       </Head>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Hero / Banner (with gradient overlay) */}
+        {/* Hero / Banner */}
         <section className="relative rounded overflow-hidden shadow-lg">
           <div
-            className="h-96 bg-cover bg-center w-full"
+            className="h-100 sm:h-96 bg-cover bg-center w-full"
             style={{
-              backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.45)), url('/images/steel-tower.jpg')",
+              backgroundImage: "url('/images/about/banner.png')",
             }}
             aria-hidden
           />
 
-          <div className="absolute inset-0 flex items-center justify-end pr-6 lg:pr-24">
-            <div className="bg-white/10 backdrop-blur-sm text-white p-6 lg:p-10 rounded max-w-md shadow-lg">
-              <h1 className="text-3xl lg:text-4xl font-serif font-semibold tracking-wide">HANS STEEL CANADA</h1>
-              <p className="mt-3 text-sm opacity-90">About Us</p>
+          <div className="absolute inset-0 flex items-center justify-start pl-6 sm:pl-12 lg:pl-24">
+            <div className="bg-white/6 backdrop-blur-sm text-white p-6 sm:p-10 rounded max-w-lg shadow-lg border border-white/10">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide uppercase">Hans Steel Canada</h1>
+              <p className="mt-2 text-sm sm:text-base text-white/90">Delivering reliable structural steel solutions for Canada</p>
             </div>
           </div>
-
-          {/* (intro moved below hero) */}
         </section>
 
-        {/* Introduction (separate from hero) */}
-        <section className="mt-12 max-w-4xl mx-auto text-gray-700 leading-relaxed">
+        {/* Introduction */}
+        <section className="mt-10 max-w-4xl mx-auto text-gray-700 leading-relaxed">
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-10">
-            <p className="leading-relaxed">
-              Hans Steel Canada is proud to be the North American Division of Qingdao Wuxiao Group.
-              With a brand new, highly advanced fabrication facility located in Stouffville, Ontario,
-              Hans Steel Canada is committed to providing fast, reliable and cost effective service and
-              quality products to the structural steel industry, particularly within the Power Transmission
-              and Distribution sectors.
+            <h2 className="text-2xl font-semibold text-gray-900">About Hans Steel Canada</h2>
+            <div className="mt-3 h-0.5 w-20 bg-gray-200 rounded" />
+
+            <p className="mt-5 text-base text-gray-700">
+              Hans Steel Canada is the North American division of Qingdao Wuxiao Group. Our new, advanced
+              fabrication facility in Stouffville, Ontario provides dependable, cost-effective structural
+              steel solutions — with a particular focus on Power Transmission and Distribution sectors.
             </p>
 
-            <p className="mt-4">
-              Leveraged by the parent company in China, which boasts an impressive 300,000 ton annual
-              capacity combined with 25 years of remarkable experience internationally, Hans Steel Canada
-              is excited and eager to bring these qualities to Canada. We strive to provide our customers
-              with outstanding experience, customer service, quality and cost.
+            <p className="mt-4 text-base text-gray-700">
+              Supported by our parent company's 300,000 ton annual capacity and 25 years of international
+              experience, we combine global expertise with local commitment to deliver high-quality products
+              and responsive customer service.
             </p>
           </div>
         </section>
 
         {/* Four key description cards */}
         <section className="mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* FeatureCard component */}
-            {/* FeatureCard component instances below (uses top-level FeatureCard) */}
-
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Focus Areas</h3>
+          <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((f) => (
               <FeatureCard key={f.title} title={f.title} description={f.description} bgColor={f.bgColor}>
                 {f.icon}
@@ -140,7 +138,7 @@ const About: NextPage = () => {
 
         {/* Map and contact card */}
         <section className="mt-12">
-          <div className="rounded-lg overflow-hidden shadow-lg h-72 sm:h-96">
+          <div className="rounded-lg overflow-hidden shadow-lg relative h-72 sm:h-96">
             <iframe
               title="Hans Steel Canada - Map"
               src="https://www.google.com/maps?q=6+Sangster+Road+Uxbridge+ON+L9P+0G5&output=embed"
@@ -148,6 +146,12 @@ const About: NextPage = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+
+            <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-md p-4 border border-gray-100 max-w-xs">
+              <p className="text-sm font-semibold text-gray-900">Hans Steel Canada</p>
+              <p className="text-sm text-gray-600 mt-1">6 Sangster Road, Uxbridge, ON L9P 0G5</p>
+              <p className="text-sm text-gray-600 mt-1">Phone: (555) 555-5555</p>
+            </div>
           </div>
         </section>
       </div>
