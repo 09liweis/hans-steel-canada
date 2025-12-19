@@ -42,87 +42,64 @@ const Services: NextPage = () => {
       </Head>
 
       {/* Hero Section with Background Image */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative h-72 sm:h-[420px] overflow-hidden">
         <div className="absolute inset-0">
-          <img 
+          <img
             src="/images/services/banner.png"
             alt="Hans Steel Services"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
         </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex items-center">
-          <div className="text-white bg-black/70 p-10 max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Services</h1>
-            <p className="text-xl md:text-2xl text-slate-200 leading-relaxed">
-              HANS STEEL CANADA CORP.
-            </p>
+          <div className="text-white max-w-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 leading-tight">Services</h1>
+            <p className="text-lg sm:text-xl text-slate-200 mb-6">Comprehensive structural steel services: engineering, fabrication, installation, and project management.</p>
+            <a href="/contact" className="inline-block bg-[#c41e3a] hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg shadow">Contact Sales</a>
           </div>
         </div>
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Brochure */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative group">
-                <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md transform transition-all duration-300">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg overflow-hidden shadow-inner">
-                    <img 
+                <div className="bg-white rounded-2xl shadow-lg p-6 max-w-md transform transition-all duration-300 border border-gray-100">
+                  <div className="aspect-[3/4] bg-slate-100 rounded-lg overflow-hidden">
+                    <img
                       src="/images/brochure/hans-steel-brochure-p01.png"
                       alt="Hans Steel Brochure"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="mt-6 text-center">
-                    <div className="bg-[#c41e3a] text-white px-6 py-3 font-bold text-sm inline-block mb-4 rounded-lg shadow-md">
+                    <div className="bg-[#c41e3a] text-white px-6 py-3 font-bold text-sm inline-block mb-4 rounded-lg shadow-sm">
                       <div>HANS STEEL</div>
                       <div>CANADA</div>
                     </div>
                     <p className="text-sm text-slate-600 mb-3 font-medium">Blueprints For Utility & Industrial Building Structures</p>
-                    <div className="flex justify-center gap-4 text-xs">
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg">
-                        <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        <span className="text-slate-700 font-medium">AISC</span>
-                      </div>
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg">
-                        <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span className="text-slate-700 font-medium">CSA</span>
-                      </div>
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg">
-                        <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                        <span className="text-slate-700 font-medium">ISO</span>
-                      </div>
-                    </div>
-                    <div className="flex justify-center gap-2 mt-4 text-xs">
-                      <div className="px-3 py-1.5 bg-slate-100 rounded-lg">
-                        <span className="text-slate-700 font-medium">CWB</span>
-                      </div>
-                      <div className="px-3 py-1.5 bg-slate-100 rounded-lg">
-                        <span className="text-slate-700 font-medium">Tekla</span>
-                      </div>
+                    <div className="flex justify-center gap-3 text-xs">
+                      <span className="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-slate-700 font-medium">AISC</span>
+                      <span className="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-slate-700 font-medium">CSA</span>
+                      <span className="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-slate-700 font-medium">ISO</span>
                     </div>
                   </div>
                   <div className="mt-6 space-y-3">
                     <a
                       href="/pdf/brochure.pdf"
                       download
-                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md text-center"
+                      className="block w-full bg-[#0ea5a4] hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow text-center"
                     >
-                      Download PDF version
+                      Download PDF
                     </a>
                     <a
                       href="/brochure"
-                      className="block w-full bg-white hover:bg-slate-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-colors duration-200 text-center"
+                      className="block w-full bg-white hover:bg-slate-50 text-slate-800 font-semibold py-3 px-6 rounded-lg border border-slate-200 transition-colors duration-200 text-center"
                     >
-                      or View it Online
+                      View Online
                     </a>
                   </div>
                 </div>
@@ -130,20 +107,19 @@ const Services: NextPage = () => {
             </div>
 
             {/* Right Side - Services List */}
-            <div className="text-white">
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 tracking-tight">Our Services</h2>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 tracking-tight">Our Services</h2>
               <div className="space-y-4">
                 {services.map((service, index) => (
-                  <div 
+                  <div
                     key={index}
-                    className="group bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl p-6 transition-all duration-300 cursor-pointer border border-white/20 hover:border-white/40 hover:shadow-xl"
+                    className="flex items-start gap-4 bg-white rounded-xl p-6 transition-shadow duration-200 border border-gray-100 hover:shadow-md"
                   >
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors duration-200">
-                      {service.title}
-                    </h3>
-                    <p className="text-blue-100 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold">{index + 1}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
+                      <p className="text-sm text-slate-600 mt-1">{service.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
