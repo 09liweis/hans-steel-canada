@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import React, { useState } from 'react'
 import { formatPhoneSimple, CONTACT_PHONE } from '../constants/text'
 
 const Services: NextPage = () => {
@@ -33,6 +34,50 @@ const Services: NextPage = () => {
       description: "Comprehensive project oversight ensuring on-time and on-budget delivery"
     }
   ]
+
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState<string>('')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setErrorMsg('')
+    setStatus('sending')
+
+    const form = new FormData(e.currentTarget as HTMLFormElement)
+    const payload = {
+      name: String(form.get('name') || '').trim(),
+      email: String(form.get('email') || '').trim(),
+      phone: String(form.get('phone') || '').trim(),
+      company: String(form.get('company') || '').trim(),
+      service: String(form.get('service') || '').trim(),
+      message: String(form.get('message') || '').trim(),
+    }
+
+    if (!payload.name || !payload.email || !payload.message) {
+      setErrorMsg('Please fill name, email and message.')
+      setStatus('error')
+      return
+    }
+
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      const data = await res.json()
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Failed to send')
+      }
+
+      setStatus('success');
+    } catch (err: any) {
+      console.error(err)
+      setErrorMsg(err?.message || 'Server error')
+      setStatus('error')
+    }
+  }
 
   return (
     <>
@@ -149,8 +194,9 @@ const Services: NextPage = () => {
             </div>
 
             {/* Right Side - Contact Form */}
-            <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl shadow-xl border border-slate-200">
-              <form className="space-y-5">
+              <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl shadow-xl border border-slate-200">
+              <form className="space-y-5" onSubmit={handleSubmit as any}>
+                {/* form state handled below */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
                     Your Name
@@ -213,13 +259,9 @@ const Services: NextPage = () => {
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white"
                   >
                     <option value="">Choose...</option>
-                    <option value="engineering">Engineering & Detailing Designing</option>
-                    <option value="fabrication">Fabrication</option>
-                    <option value="installation">Installation</option>
-                    <option value="general">General Contract</option>
-                    <option value="concrete">Concrete & Foundation</option>
-                    <option value="estimate">Estimate</option>
-                    <option value="project">Project Management</option>
+                    {services.map((s, i) => (
+                      <option key={i} value={s.title}>{s.title}</option>
+                    ))}
                   </select>
                 </div>
 
@@ -236,11 +278,19 @@ const Services: NextPage = () => {
                   ></textarea>
                 </div>
 
+                {status === 'success' && (
+                  <div className="p-3 bg-green-50 border border-green-200 text-green-800 rounded">Thanks — your message was sent.</div>
+                )}
+                {status === 'error' && errorMsg && (
+                  <div className="p-3 bg-red-50 border border-red-200 text-red-800 rounded">{errorMsg}</div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                  disabled={status === 'sending'}
+                  className={`w-full ${status === 'sending' ? 'opacity-60 cursor-not-allowed' : ''} bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl`}
                 >
-                  Send
+                  {status === 'sending' ? 'Sending...' : 'Send'}
                 </button>
               </form>
             </div>
