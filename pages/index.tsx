@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const slides = [
     {
       image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/11/bg_hero_1600x868.jpg',
-      title: '25+ Years of International Experiences',
+      title: '30+ Years of International Experiences',
       subtitle: '98% on-time deliveries Best lead-times in the industry Always prepared with a contingency plan',
       link: '/projects'
     },
