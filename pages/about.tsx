@@ -139,21 +139,11 @@ const About: NextPage = () => {
 
         {/* Map and contact card */}
         <section className="mt-12">
-            <div className="rounded-lg overflow-hidden shadow-lg relative h-72 sm:h-96">
             <GoogleMap
               query="6 Sangster Road Uxbridge ON L9P 0G5"
               title="Hans Steel Canada - Map"
-              className="w-full h-full border-0"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
             />
-
-            <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-md p-4 border border-gray-100 max-w-xs">
-              <p className="text-sm font-semibold text-gray-900">Hans Steel Canada</p>
-              <p className="text-sm text-gray-600 mt-1">6 Sangster Road, Uxbridge, ON L9P 0G5</p>
-              <p className="text-sm text-gray-600 mt-1">Phone: (555) 555-5555</p>
-            </div>
-          </div>
         </section>
       </div>
     </>

@@ -335,9 +335,7 @@ const Home: NextPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <h2 className="text-2xl font-semibold mb-4 text-slate-900">Our Location</h2>
-          <div className="rounded-lg overflow-hidden shadow-lg h-72 sm:h-96">
-            <GoogleMap query="6 Sangster Road Uxbridge ON L9P 0G5" title="Hans Steel Canada - Map" className="w-full h-full border-0" />
-          </div>
+            <GoogleMap query="6 Sangster Road Uxbridge ON L9P 0G5" title="Hans Steel Canada - Map" />
         </div>
       </section>
 
