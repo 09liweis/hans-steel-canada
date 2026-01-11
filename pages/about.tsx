@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import GoogleMap from '../components/GoogleMap'
 
 type FeatureCardProps = {
   title: string
@@ -138,10 +139,10 @@ const About: NextPage = () => {
 
         {/* Map and contact card */}
         <section className="mt-12">
-          <div className="rounded-lg overflow-hidden shadow-lg relative h-72 sm:h-96">
-            <iframe
+            <div className="rounded-lg overflow-hidden shadow-lg relative h-72 sm:h-96">
+            <GoogleMap
+              query="6 Sangster Road Uxbridge ON L9P 0G5"
               title="Hans Steel Canada - Map"
-              src="https://www.google.com/maps?q=6+Sangster+Road+Uxbridge+ON+L9P+0G5&output=embed"
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import MetaHead from '../components/MetaHead';
 import Link from 'next/link'
 import { useState, useRef } from 'react'
+import GoogleMap from '../components/GoogleMap'
 
 const Home: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -326,6 +327,16 @@ const Home: NextPage = () => {
                 sandblasting and painting all under one roof and managed by a state of the art ERP system."
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Map Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <h2 className="text-2xl font-semibold mb-4 text-slate-900">Our Location</h2>
+          <div className="rounded-lg overflow-hidden shadow-lg h-72 sm:h-96">
+            <GoogleMap query="6 Sangster Road Uxbridge ON L9P 0G5" title="Hans Steel Canada - Map" className="w-full h-full border-0" />
           </div>
         </div>
       </section>
