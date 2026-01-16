@@ -2,6 +2,7 @@ export const projectsData = [
   {
     id: 'woodside-square',
     title:'Woodside Square',
+    description: 'Mall and Cinema Complex in Scarborough',
     features:[
       'Function: Mall + Cinema Complex',
       'Location: Scarborough',
@@ -19,6 +20,7 @@ export const projectsData = [
   {
     id: 'mount_dennis_station',
     title:'mount_dennis_station',
+    description: 'Crosstown LRT Main Station in Toronto',
     features:[
       'Function: Crosstown LRT Main Station',
       'Location: Toronto',
@@ -35,6 +37,7 @@ export const projectsData = [
   {
     id: 'orillia_rec_centre',
     title:'orillia_rec_centre',
+    description: 'Community Recreation Centre in Orillia',
     features:[
       'Function: Community Recreation Centre',
       'Location: Orillia',
@@ -52,6 +55,7 @@ export const projectsData = [
   {
     id: 'cranberry_restore',
     title:'cranberry_restore',
+    description: 'Retirement Home in Collingwood',
     features:[
       'Function: Retirement Home',
       'Location: Collingwood',
@@ -69,6 +73,7 @@ export const projectsData = [
   {
     id: 'richmond_hill_cemetery',
     title:'richmond_hill_cemetery',
+    description: 'Community Cemetery in Richmond Hill',
     features:[
       'Function: Community Cemetery',
       'Location: Richmond Hill',
@@ -86,6 +91,7 @@ export const projectsData = [
   {
     id: 'canada_royal_milk_inc.',
     title:'canada_royal_milk_inc.',
+    description: 'Milk Formula Facility in Toronto',
     features:[
       'Function: Milk Formula Facility',
       'Location: Toronto',
@@ -103,6 +109,7 @@ export const projectsData = [
   {
     id: 'maple_leaf_poultry',
     title:'maple_leaf_poultry',
+    description: 'Poultry Shop in London',
     features:[
       'Function: Poultry Shop',
       'Location: London',
@@ -119,6 +126,7 @@ export const projectsData = [
   {
     id: 'westbridge_warehouse',
     title:'westbridge_warehouse',
+    description: 'Storage Warehouse in Toronto',
     features:[
       'Function: Storage Warehouse',
       'Location: Toronto',
@@ -136,6 +144,7 @@ export const projectsData = [
   {
     id: 'gilbert_storage',
     title:'gilbert_storage',
+    description: 'Storage Facility in Toronto',
     features:[
       'Function: Storage',
       'Location: Toronto',
@@ -152,6 +161,7 @@ export const projectsData = [
   {
     id: 'mining_stone_crusher',
     title:'mining_stone_crusher',
+    description: 'Mining Stone Crusher',
     features:[
       
     ],
@@ -166,23 +176,14 @@ export const projectsData = [
   {
     id: 'mining_production_modular',
     title:'mining_production_modular',
+    description: 'Modular Mining Production Facility',
     features:[
       
     ],
     mainImage: "/images/projects-new/mining_production_modular/01.png",
     images:[
       "/images/projects-new/mining_production_modular/02.png",
-    ]
-  },
-
-  {
-    id: 'mining_production_modular',
-    title:'mining_production_modular',
-    features:[
-      
-    ],
-    mainImage: "/images/projects-new/mining_production_modular/03.png",
-    images:[
+      "/images/projects-new/mining_production_modular/03.png",
       "/images/projects-new/mining_production_modular/04.png",
       "/images/projects-new/mining_production_modular/05.png",
     ]
@@ -191,6 +192,7 @@ export const projectsData = [
   {
     id: 'clamsheel_dreger',
     title:'clamsheel_dreger',
+    description: 'Clamshell Dredger',
     features:[
       
     ],
@@ -204,6 +206,7 @@ export const projectsData = [
   {
     id: 'transmission_tower',
     title:'transmission_tower',
+    description: 'Transmission Tower',
     features:[
       
     ],

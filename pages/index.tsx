@@ -1,32 +1,40 @@
 import type { NextPage } from 'next'
 import MetaHead from '../components/MetaHead';
 import Link from 'next/link'
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import GoogleMap from '../components/GoogleMap'
+import { projectsData } from '../constants/projectsData'
 
 const Home: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = [
-    {
-      image: '/images/home/slides/office.png',
-      title: '30+ Years of International Experiences',
-      subtitle: '98% on-time deliveries Best lead-times in the industry Always prepared with a contingency plan',
-      link: '/projects'
-    },
-    {
-      image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/11/orillia_07_1600x868.jpg',
-      title: 'Steel Fabrication',
-      subtitle: 'Advanced Manufacturing Facility',
-      link: '/projects'
-    },
-    {
-      image: 'https://www.hanssteel.com/cph7/wp-content/uploads/2021/10/lrt_01_1600x868.jpg',
-      title: 'Crosstown LRT',
-      subtitle: 'Mount Dennis Station and EMSF',
-      link: '/projects'
-    }
-  ]
+  const slides = useMemo(() => {
+    const getRandomProjects = (num: number) => {
+      const shuffled = [...projectsData].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, num);
+    };
+    const randomProjects = getRandomProjects(2);
+    return [
+      {
+        image: '/images/home/slides/office.png',
+        title: '30+ Years of International Experiences',
+        subtitle: '98% on-time deliveries Best lead-times in the industry Always prepared with a contingency plan',
+        link: '/projects'
+      },
+      {
+        image: randomProjects[0].mainImage,
+        title: randomProjects[0].title,
+        subtitle: randomProjects[0].description,
+        link: '/projects'
+      },
+      {
+        image: randomProjects[1].mainImage,
+        title: randomProjects[1].title,
+        subtitle: randomProjects[1].description,
+        link: '/projects'
+      }
+    ];
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
