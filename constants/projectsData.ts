@@ -19,7 +19,7 @@ export const projectsData = [
 
   {
     id: 'mount_dennis_station',
-    title:'mount_dennis_station',
+    title:'Mount Dennis Station',
     description: 'Crosstown LRT Main Station in Toronto',
     features:[
       'Function: Crosstown LRT Main Station',
@@ -36,7 +36,7 @@ export const projectsData = [
 
   {
     id: 'orillia_rec_centre',
-    title:'orillia_rec_centre',
+    title:'Orillia Rec Centre',
     description: 'Community Recreation Centre in Orillia',
     features:[
       'Function: Community Recreation Centre',
@@ -54,7 +54,7 @@ export const projectsData = [
 
   {
     id: 'cranberry_restore',
-    title:'cranberry_restore',
+    title:'Cranberry Restore',
     description: 'Retirement Home in Collingwood',
     features:[
       'Function: Retirement Home',
@@ -72,7 +72,7 @@ export const projectsData = [
 
   {
     id: 'richmond_hill_cemetery',
-    title:'richmond_hill_cemetery',
+    title:'Richmond Hill Cemetery',
     description: 'Community Cemetery in Richmond Hill',
     features:[
       'Function: Community Cemetery',
@@ -90,7 +90,7 @@ export const projectsData = [
     
   {
     id: 'canada_royal_milk_inc.',
-    title:'canada_royal_milk_inc.',
+    title:'Canada Royal Milk Inc.',
     description: 'Milk Formula Facility in Toronto',
     features:[
       'Function: Milk Formula Facility',
@@ -108,7 +108,7 @@ export const projectsData = [
 
   {
     id: 'maple_leaf_poultry',
-    title:'maple_leaf_poultry',
+    title:'Maple Leaf Poultry',
     description: 'Poultry Shop in London',
     features:[
       'Function: Poultry Shop',
@@ -125,7 +125,7 @@ export const projectsData = [
 
   {
     id: 'westbridge_warehouse',
-    title:'westbridge_warehouse',
+    title:'Westbridge Warehouse',
     description: 'Storage Warehouse in Toronto',
     features:[
       'Function: Storage Warehouse',
@@ -143,7 +143,7 @@ export const projectsData = [
 
   {
     id: 'gilbert_storage',
-    title:'gilbert_storage',
+    title:'Gilbert Storage',
     description: 'Storage Facility in Toronto',
     features:[
       'Function: Storage',
@@ -160,7 +160,7 @@ export const projectsData = [
 
   {
     id: 'mining_stone_crusher',
-    title:'mining_stone_crusher',
+    title:'Mining Stone Crusher',
     description: 'Mining Stone Crusher',
     features:[
       
@@ -175,7 +175,7 @@ export const projectsData = [
 
   {
     id: 'mining_production_modular',
-    title:'mining_production_modular',
+    title:'Mining Production Modular',
     description: 'Modular Mining Production Facility',
     features:[
       
@@ -191,7 +191,7 @@ export const projectsData = [
 
   {
     id: 'clamsheel_dreger',
-    title:'clamsheel_dreger',
+    title:'Clamsheel Dreger',
     description: 'Clamshell Dredger',
     features:[
       
@@ -205,7 +205,7 @@ export const projectsData = [
 
   {
     id: 'transmission_tower',
-    title:'transmission_tower',
+    title:'Transmission Tower',
     description: 'Transmission Tower',
     features:[
       
